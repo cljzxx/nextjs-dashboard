@@ -20,7 +20,7 @@ export default function Page() {
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
             </a>
-            , brought to you by Vercel. 嘟嘟，张沐辰
+            , brought to you by Vercel.
           </p>
           <Link
             href="/login"
