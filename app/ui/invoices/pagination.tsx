@@ -43,7 +43,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
             return (
               <PaginationNumber
-                key={page}
+                key={`${page}-${index}`} // 修改这里，使用页码和索引组合作为 key
                 href={createPageURL(page)}
                 page={page}
                 position={position}
@@ -82,7 +82,7 @@ function PaginationNumber({
       'z-10 bg-blue-600 border-blue-600 text-white': isActive,
       'hover:bg-gray-100': !isActive && position !== 'middle',
       'text-gray-300': position === 'middle',
-    },
+    }
   );
 
   return isActive || position === 'middle' ? (
@@ -110,7 +110,7 @@ function PaginationArrow({
       'hover:bg-gray-100': !isDisabled,
       'mr-2 md:mr-4': direction === 'left',
       'ml-2 md:ml-4': direction === 'right',
-    },
+    }
   );
 
   const icon =
